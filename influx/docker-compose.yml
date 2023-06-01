@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  influx:
+    image: influxdb:2.0
+    volumes:
+      - ${CONFIG_FILE}:/etc/influxdb2/config.yml
+    ports:
+      - target: 8086
+        published: 8086
+        protocol: tcp
+        mode: host
+    environment:
+      - VIRTUAL_HOST=${JW_VIRTUAL_HOST}
+      - VIRTUAL_PORT=8086
+      - VIRTUAL_PROTO=https
