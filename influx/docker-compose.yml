@@ -13,4 +13,4 @@ services:
     environment:
       - VIRTUAL_HOST=${JW_VIRTUAL_HOST}
       - VIRTUAL_PORT=8086
-      - VIRTUAL_PROTO=https
+      - VIRTUAL_PROTO=http
