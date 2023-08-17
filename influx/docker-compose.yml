@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   influx:
-    image: influxdb:2.0
+    image: influxdb:2.7
     volumes:
       - ${CONFIG_FILE}:/etc/influxdb2/config.yml
     ports:
